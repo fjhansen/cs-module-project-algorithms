@@ -2,6 +2,7 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
 ##def product_of_all_other_numbers(arr):
 ##    # Your code here
 ##    new_list = []
@@ -13,24 +14,35 @@ Returns: a List of integers
 ##
 ##    return new_list
 
+##def product_of_all_other_numbers(arr):
+##    new_list = []
+##    current_num = 0
+##
+##    for x in range(current_num, len(arr)+1):
+##        print(f'\nx: {arr[current_num]} {arr[x]}\n')
+##        
+##        for y in range(current_num,len(arr)+1):
+##            print(f'y: {arr[current_num]} {arr[y]}')
+
 def product_of_all_other_numbers(arr):
+
+    product_before_index = [None] * len(arr)
+    print(f'product_before_index: {product_before_index}')
+    product = 1
     new_list = []
-    current_num = 0
-
-    for x in range(current_num, len(arr)+1):
-        print(f'\nx: {arr[current_num]} {arr[x]}\n')
-        
-        for y in range(current_num,len(arr)+1):
-            print(f'y: {arr[current_num]} {arr[y]}')
-
-           
-
-            
-
-            
-        
+    
+    for i in range(len(arr)):
+        print(f'1. arr[i]: {arr[i]}')
+        product_before_index[i] = product
+        print(f'2. product: {product}')
+        product *= arr[i]
+        print(f'3. product *= arr[i]: {product}')
+        new_list.append(product)
 
     return new_list
+    
+
+    
 
 
 
